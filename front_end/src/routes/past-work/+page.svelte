@@ -1,7 +1,7 @@
 <script lang="ts">
   import Slideshow from '$lib/components/Slideshow.svelte';
   import SplitBackground from '$lib/components/Background.svelte';
-  let baseURL = 'https://s3.us-east-2.amazonaws.com/tsteurer.com-prod/past-work/';
+  let baseURL = 'https://s3.us-west-2.amazonaws.com/tsteurer.com/past-work/';
   // Sample slide data
   const slides = [
     {
@@ -106,6 +106,6 @@
   h1 {
     margin-bottom: 20px;
     text-align: center;
-    color: #061E45;
+    color: #434343;
   }
 </style>

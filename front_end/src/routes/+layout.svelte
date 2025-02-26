@@ -19,18 +19,18 @@
 	}
 	/* Styles for navigation links */
 	nav a {
-		color: #061E45;
+		color: #434343;
 		text-decoration: none;
 		padding: 0.3rem 0.5rem;
 		border-radius: 4px;
 		transition: all 0.2s ease;
 	}
 	nav a:visited {
-		color: #061E45;
+		color: #434343;
 	}
 	nav a:hover {
 		color: white;
-		background-color: #061E45;
+		background-color: #434343;
 	}
 	nav h3 {
 		margin-right: 1rem;  /* Adds spacing between links */

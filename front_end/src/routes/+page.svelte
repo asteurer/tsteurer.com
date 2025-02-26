@@ -1,9 +1,9 @@
 <script>
   // Props for the component
-  export let imageUrl = 'https://s3.us-east-2.amazonaws.com/tsteurer.com-prod/about/drum_self_portrait.jpeg'; // URL to your image
+  export let imageUrl = 'https://s3.us-west-2.amazonaws.com/tsteurer.com/about/drum_self_portrait.jpeg'; // URL to your image
   export let altText = 'Self portrait'; // Alt text for accessibility
   export let titleSize = '2rem';
-  export let paragraphSize = '1rem';
+  export let paragraphSize = '1.25rem';
   export let backgroundColor = 'rgba(0, 0, 0, 0.6)'; // Semi-transparent background color
   export let textColor = 'white'; // Text color
   export let padding = '1rem'; // Padding around the text
@@ -63,6 +63,7 @@
   p {
       margin: 0;
       line-height: 1.5;
+      text-align: left;
   }
 
   .top {

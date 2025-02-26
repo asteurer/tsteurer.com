@@ -2,7 +2,7 @@ FROM node:22.14-slim AS builder
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
-RUN npm install --save-dev @sveltejs/adapter-node
+RUN npm install --save-dev @sveltejs/adapter-static
 COPY . .
 RUN npm run build
 
@@ -18,4 +18,4 @@ EXPOSE 8080
 ENV NODE_ENV=production
 ENV PORT=8080
 
-CMD [ "node", "build" ]
+CMD [ "sleep", "30000" ]
