@@ -8,7 +8,6 @@
     alt?: string; // For images
     autoplay?: boolean; // For videos and audio
     loop?: boolean; // For videos and audio
-    startPage?: number; // For PDFs
   }
 
   // Props
@@ -26,23 +25,6 @@
 
   // Helper to get current slide
   $: currentSlide = slides[currentIndex];
-
-  // Start/stop autoplay timer based on media type
-  $: {
-    // Clear any existing timer when slide changes
-    if (timer) clearTimeout(timer);
-
-    // Only auto-advance for images
-    if (currentSlide && currentSlide.type === 'image') {
-      timer = setTimeout(() => {
-        next();
-      }, autoplayInterval);
-    }
-
-    if (currentSlide && currentSlide.type == 'pdf') {
-      currentPdfPage = currentSlide.startPage || 1;
-    }
-  }
 
   // Navigation functions
   function next() {
@@ -81,7 +63,7 @@
           controls={showControls}
           autoplay={currentSlide.autoplay ?? true}
           loop={currentSlide.loop ?? false}
-          muted="true"
+          muted={true}
           on:ended={() => next()}
         >
           Your browser does not support the video tag.

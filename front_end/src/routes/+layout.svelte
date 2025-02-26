@@ -2,6 +2,10 @@
 	let { children } = $props();
 </script>
 
+<svelte:head>
+	<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</svelte:head>
+
 <nav>
 	<h3><a href="/">About</a></h3>
 	<h3><a href="/crew-work">Crew Work</a></h3>
@@ -12,10 +16,13 @@
 {@render children()}
 
 <style>
+	:global(body) {
+		font-family: 'Comfortaa', cursive;
+	}
 	nav {
 		display: flex;
-		justify-content: left;
-		text-align: left;
+		justify-content: center;
+		text-align: center;
 	}
 	/* Styles for navigation links */
 	nav a {
