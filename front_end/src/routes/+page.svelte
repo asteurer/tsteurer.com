@@ -8,24 +8,40 @@
   export let textColor = 'white'; // Text color
   export let padding = '1rem'; // Padding around the text
   export let position = 'top'; // Position of the overlay: 'top', 'bottom', 'center'
+  export let breakpoint = '768px'; // Mobile breakpoint size
 </script>
-
-<div class="image-container">
-  <div
-    class="text-overlay {position}"
-    style="background-color: {backgroundColor}; color: {textColor}; padding: {padding}"
-  >
-    <div class="text-content">
-      <h2 style:font-size={titleSize}>Tyson Steurer</h2>
-      <p style:font-size={paragraphSize}>I am currently pursuing a spot in the Post Production track in the Digital Cinema Production major, with the goal of graduating with an emphasis in sound. My passion for sound design is deeply rooted in my love for music, having spent years playing and listening as a drummer, percussionist, and pianist. I believe this musical foundation will enhance my technical skills in the field of sound design, providing a unique edge in crafting immersive audio experiences for film and media.</p><br>
-      <p style:font-size={paragraphSize}>I bring a solid technical skill set, particularly in editing with Descript, as well as experience with Davinci Resolve, Premiere Pro, and Avid Media Composer. One of my most significant accomplishments to date is single-handedly editing a 70-episode course on healing from betrayal trauma called Courageous Together. This project honed my editing abilities and reinforced my commitment to delivering high-quality work that impacts and educates. I’m excited to continue developing my post-production skills through both academic studies and real-world applications.</p><br>
-      <p style:font-size={paragraphSize}>Looking ahead, my professional goal is to build a versatile portfolio and grow my network within the industry. I am actively seeking internship opportunities to further develop my skill set and become an asset in post-production work. Ultimately, I hope to work as a contract worker in Indie films and advertisements, using my editing and sound design expertise to create compelling, high-impact content.</p><br>
+<div class="responsive-container">
+  <div class="image-container">
+    <div
+      class="text-overlay {position}"
+      style="background-color: {backgroundColor}; color: {textColor}; padding: {padding}"
+    >
+      <div class="text-content">
+        <h2 style:font-size={titleSize}>Tyson Steurer</h2>
+        <p style:font-size={paragraphSize}>I am currently pursuing a spot in the Post Production track in the Digital Cinema Production major, with the goal of graduating with an emphasis in sound. My passion for sound design is deeply rooted in my love for music, having spent years playing and listening as a drummer, percussionist, and pianist. I believe this musical foundation will enhance my technical skills in the field of sound design, providing a unique edge in crafting immersive audio experiences for film and media.</p><br>
+        <p style:font-size={paragraphSize}>I bring a solid technical skill set, particularly in editing with Descript, as well as experience with Davinci Resolve, Premiere Pro, and Avid Media Composer. One of my most significant accomplishments to date is single-handedly editing a 70-episode course on healing from betrayal trauma called Courageous Together. This project honed my editing abilities and reinforced my commitment to delivering high-quality work that impacts and educates. I’m excited to continue developing my post-production skills through both academic studies and real-world applications.</p><br>
+        <p style:font-size={paragraphSize}>Looking ahead, my professional goal is to build a versatile portfolio and grow my network within the industry. I am actively seeking internship opportunities to further develop my skill set and become an asset in post-production work. Ultimately, I hope to work as a contract worker in Indie films and advertisements, using my editing and sound design expertise to create compelling, high-impact content.</p><br>
+      </div>
     </div>
+    <img src={imageUrl} alt={altText} />
   </div>
-  <img src={imageUrl} alt={altText} />
+
+  <div
+  class="mobile-text-content"
+  style="background-color: {backgroundColor}; color: {textColor}; padding: {padding}"
+  >
+    <h2 style:font-size={titleSize}>Tyson Steurer</h2>
+    <p style:font-size={paragraphSize}>I am currently pursuing a spot in the Post Production track in the Digital Cinema Production major, with the goal of graduating with an emphasis in sound. My passion for sound design is deeply rooted in my love for music, having spent years playing and listening as a drummer, percussionist, and pianist. I believe this musical foundation will enhance my technical skills in the field of sound design, providing a unique edge in crafting immersive audio experiences for film and media.</p><br>
+    <p style:font-size={paragraphSize}>I bring a solid technical skill set, particularly in editing with Descript, as well as experience with Davinci Resolve, Premiere Pro, and Avid Media Composer. One of my most significant accomplishments to date is single-handedly editing a 70-episode course on healing from betrayal trauma called Courageous Together. This project honed my editing abilities and reinforced my commitment to delivering high-quality work that impacts and educates. I’m excited to continue developing my post-production skills through both academic studies and real-world applications.</p><br>
+    <p style:font-size={paragraphSize}>Looking ahead, my professional goal is to build a versatile portfolio and grow my network within the industry. I am actively seeking internship opportunities to further develop my skill set and become an asset in post-production work. Ultimately, I hope to work as a contract worker in Indie films and advertisements, using my editing and sound design expertise to create compelling, high-impact content.</p><br>
+  </div>
 </div>
 
 <style>
+  .responsive-container {
+    width: 100%;
+  }
+
   .image-container {
     position: relative;
     width: 100%;
@@ -52,6 +68,7 @@
   }
 
   .text-content {
+    padding-top: 5rem;
     width: 80%;
     margin: 0 auto;
   }
@@ -78,5 +95,35 @@
 
   .center {
     justify-content: center;
+  }
+
+  .mobile-text-content {
+    display: none;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .mobile-text-content h2 {
+    margin: 1rem 0;
+  }
+
+  .mobile-text-content p {
+    margin: 0;
+    line-height: 1.5;
+    text-align: left;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* Media query for mobile devices */
+  @media (max-width: 768px) {
+    .text-overlay {
+      display: none; /* Hide overlay on small screens */
+    }
+
+    .mobile-text-content {
+      display: block; /* Show separate text div on small screens */
+    }
   }
 </style>
