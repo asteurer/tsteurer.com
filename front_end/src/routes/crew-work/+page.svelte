@@ -60,6 +60,34 @@
     {
       type: 'image',
       src: baseURL + 'western_3.jpeg',
+    },
+    {
+      type: 'image',
+      src: baseURL + 'joe_1.png',
+    },
+    {
+      type: 'image',
+      src: baseURL + 'joe_2.png',
+    },
+    {
+      type: 'image',
+      src: baseURL + 'joe_3.png',
+    },
+    {
+      type: 'image',
+      src: baseURL + 'pound_it.jpeg',
+    },
+    {
+      type: 'video',
+      src: baseURL + 'pound_it.mp4',
+    },
+    {
+      type: 'image',
+      src: baseURL + 'psycho_1.jpeg',
+    },
+    {
+      type: 'image',
+      src: baseURL + 'psycho_2.jpeg',
     }
   ];
 </script>
